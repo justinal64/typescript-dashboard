@@ -3,11 +3,14 @@ html,
 #root,
 .root,
 main,
-.container {
+.container,
+.full_page {
     height: 100%;
     width: 100%;
     background-color: #d3d3d3;
     margin: 0;
+    padding-right: 0;
+    padding-left: 0;
 }
 
 #body {
@@ -32,4 +35,8 @@ main,
 .navigation {
     background-color: pink;
     min-height: 100%;
+}
+
+.content {
+    background-color: grey;
 }
