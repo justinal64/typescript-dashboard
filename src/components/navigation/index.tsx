@@ -1,4 +1,5 @@
 import * as React from "react";
+import Collapsible from "react-collapsible";
 import { Link } from "react-router-dom";
 
 const Navigation = () => {
@@ -15,6 +16,7 @@ const Navigation = () => {
           <Link to="/topics">Topics</Link>
         </li>
       </ul>
+      <Collapsible trigger="Components">This is a test</Collapsible>
     </div>
   );
 };
