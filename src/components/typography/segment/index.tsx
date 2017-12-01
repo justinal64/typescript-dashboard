@@ -1,8 +1,9 @@
 import * as React from "react";
+import { SegmentWrapper, Subtitle } from "./styled";
 
 export interface Props {
-  font?: number;
-  title: string;
+  font?: number; // ? = optional
+  title: string; // no ? means required
 }
 
 class Segment extends React.Component<Props, object> {
@@ -10,11 +11,9 @@ class Segment extends React.Component<Props, object> {
     const { font, title } = this.props;
 
     return (
-      <div>
-        Segment
-        {title}
-        {font}
-      </div>
+      <SegmentWrapper font={font}>
+        <Subtitle>{title}</Subtitle>
+      </SegmentWrapper>
     );
   }
 }

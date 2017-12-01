@@ -7,7 +7,7 @@ const Navigation = () => {
   return (
     <div>
       <ul>
-        <Segment title="Test" font={2.1} />
+        <Segment title="Dashboard" font={1.5} />
         <li>
           <Link to="/">Home</Link>
         </li>
