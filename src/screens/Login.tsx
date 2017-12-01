@@ -1,11 +1,10 @@
 import * as React from "react";
+import LoginContainer from "../containers/Login";
 
 const Login = () => {
   return (
     <div>
-      Login Page Working!!!!
-      {/* {console.log({ props })}
-      <LoginContainer history={props.history} /> */}
+      <LoginContainer />
     </div>
   );
 };
