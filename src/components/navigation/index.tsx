@@ -1,10 +1,13 @@
 import * as React from "react";
+import Collapsible from "react-collapsible";
 import { Link } from "react-router-dom";
+import Segment from "../typography/segment/index";
 
 const Navigation = () => {
   return (
     <div>
       <ul>
+        <Segment title="Dashboard" font={1.5} />
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -15,6 +18,7 @@ const Navigation = () => {
           <Link to="/topics">Topics</Link>
         </li>
       </ul>
+      <Collapsible trigger="Components">This is a test</Collapsible>
     </div>
   );
 };
