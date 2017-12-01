@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 const Navigation = () => {
   return (
     <div>
-      {" "}
       <ul>
         <li>
           <Link to="/">Home</Link>
@@ -16,7 +15,6 @@ const Navigation = () => {
           <Link to="/topics">Topics</Link>
         </li>
       </ul>
-      <hr />
     </div>
   );
 };

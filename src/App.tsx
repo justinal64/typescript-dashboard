@@ -1,27 +1,26 @@
 import * as React from "react";
 import { Col, Grid, Row } from "react-flexbox-grid";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-// import Navigation from "./components/navigation/index";
+import Navigation from "./components/navigation/index";
 import Login from "./screens/Login";
-
 import "./styles/layout.css";
+
 class App extends React.Component {
   public render() {
     return (
       <Router>
         <Grid>
           <Row className="around-lg around-md around-sm full_page">
-            <Col className="logo" xs={12} sm={3} md={3} lg={3}>
+            <Col className="logo" xs={12} sm={4} md={3} lg={2}>
               Logo Goes Here
             </Col>
-            <Col className="header" xs={12} sm={9} md={9} lg={9}>
-              {/* <Navigation /> */}
+            <Col className="header" xs={12} sm={8} md={9} lg={10}>
               Top Header
             </Col>
-            <Col className="navigation" xs={12} sm={3} md={3} lg={3}>
-              Navigation
+            <Col className="navigation" xs={12} sm={4} md={3} lg={2}>
+              <Navigation />
             </Col>
-            <Col className="full_page content" xs={12} sm={9} md={9} lg={9}>
+            <Col className="full_page content" xs={12} sm={8} md={9} lg={10}>
               {/* Make a routes component? */}
               <Route exact path="/" component={Login} />
               <Route path="/about" component={Login} />
