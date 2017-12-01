@@ -16,7 +16,7 @@ class Login extends React.Component<Props, object> {
     return (
       <div className="hello">
         <div className="greeting">
-          Hello {name + getExclamationMarks(enthusiasmLevel)}
+          Login Page! Hello {name + getExclamationMarks(enthusiasmLevel)}
         </div>
       </div>
     );

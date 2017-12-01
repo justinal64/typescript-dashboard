@@ -1,0 +1,42 @@
+body,
+html,
+#root,
+.root,
+main,
+.container,
+.full_page {
+    height: 100%;
+    width: 100%;
+    background-color: #d3d3d3;
+    margin: 0;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+#body {
+    height: 100%;
+    /* overflow: hidden; */
+    /*makes the body non-scrollable (we will add scrolling to the sidebar and main content containers)*/
+    margin: 0px;
+    /*removes default style*/
+    display: flex;
+    /*enables flex content for its children*/
+    box-sizing: border-box;
+}
+
+.logo {
+    background-color: blue;
+}
+
+.header {
+    background-color: red;
+}
+
+.navigation {
+    background-color: pink;
+    min-height: 100%;
+}
+
+.content {
+    background-color: grey;
+}

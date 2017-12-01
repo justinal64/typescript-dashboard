@@ -1,31 +1,33 @@
 import * as React from "react";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+import { Col, Grid, Row } from "react-flexbox-grid";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Navigation from "./components/navigation/index";
 import Login from "./screens/Login";
+import "./styles/layout.css";
 
 class App extends React.Component {
   public render() {
     return (
       <Router>
-        <div>
-          {/* add navigation component here */}
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/topics">Topics</Link>
-            </li>
-          </ul>
-
-          <hr />
-
-          <Route exact path="/" component={Login} />
-          {/* <Route path="/about" component={About} />
-          <Route path="/topics" component={Topics} /> */}
-        </div>
+        <Grid>
+          <Row className="around-lg around-md around-sm full_page">
+            <Col className="logo" xs={12} sm={4} md={3} lg={2}>
+              Logo Goes Here
+            </Col>
+            <Col className="header" xs={12} sm={8} md={9} lg={10}>
+              Top Header
+            </Col>
+            <Col className="navigation" xs={12} sm={4} md={3} lg={2}>
+              <Navigation />
+            </Col>
+            <Col className="full_page content" xs={12} sm={8} md={9} lg={10}>
+              {/* Make a routes component? */}
+              <Route exact path="/" component={Login} />
+              <Route path="/about" component={Login} />
+              <Route path="/topics" component={Login} />
+            </Col>
+          </Row>
+        </Grid>
       </Router>
     );
   }
