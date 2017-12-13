@@ -2,6 +2,7 @@ import * as React from "react";
 import Collapsible from "react-collapsible";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { getIcon } from "../../utils/helpers";
 import Segment from "../typography/segment/index";
 
 const Ul = styled.ul`
@@ -23,25 +24,15 @@ const Li = styled.li`
     background: #657f89;
   }
 `;
+
 const Navigation = () => {
   return (
     <div>
-      {/* <Segment title="Dashboard" font={1.5} /> */}
-      {/* <Ul>
-        <Li>
-          <Link to="/">Home</Link>
-        </Li>
-        <Li>
-          <Link to="/about">About</Link>
-        </Li>
-        <Li>
-          <Link to="/topics">Topics</Link>
-        </Li>
-      </Ul> */}
       <Ul>
         <Segment title="Dashboard" font={0.75} />
         <li>
-          {/* {getIcon("puzzle-piece", navColorScheme)} */}
+          {getIcon("puzzle-piece")}
+          {/* <Icon name="puzzle-piece" /> */}
           <Link to="/dashboard">Dashboard</Link>
         </li>
         <Segment title="UI Elements" font={0.75} />

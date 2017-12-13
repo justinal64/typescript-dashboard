@@ -1,6 +1,17 @@
 import * as React from "react";
 import FontAwesome from "react-fontawesome";
 
-export const getIcon = (font, styles) => {
-  return <FontAwesome name={font} style={styles} />;
+const navColorScheme = {
+  color: "#9faecb",
+  marginLeft: ".50em",
+  width: "20px",
+  height: "20px",
+  paddingRight: ".5em"
 };
+
+export const getIcon = (name: string) => {
+  console.log(name);
+  return <FontAwesome name={name} style={navColorScheme} />;
+};
+
+export default getIcon;
