@@ -40,3 +40,7 @@ main,
 .content {
     background-color: grey;
 }
+
+.Collapsible {
+    display: inline;
+}
