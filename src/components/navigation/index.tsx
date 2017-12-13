@@ -170,6 +170,7 @@ const Navigation = () => {
             <Link to="/email">Email</Link>
           </Li>
         </Collapsible>
+        <Segment title="Coming Soon" font={0.75} />
         <li>
           {getIcon("calculator")}
           <Link to="/widgets">Widgets</Link>
