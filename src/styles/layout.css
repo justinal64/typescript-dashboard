@@ -32,17 +32,22 @@ main,
     background-color: red;
 }
 
-.navigation {
-    background-color: #384042;
-    min-height: 100%;
-}
-
 .content {
     background-color: grey;
 }
 
 
 /* Side Navigation  */
+
+.navigation {
+    background-color: #384042;
+    min-height: 100%;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+}
 
 .Collapsible {
     display: inline;
