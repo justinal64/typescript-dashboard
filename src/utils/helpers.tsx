@@ -14,4 +14,4 @@ export const getIcon = (name: string) => {
   return <FontAwesome name={name} style={navColorScheme} />;
 };
 
-export default getIcon;
+export default { getIcon };
