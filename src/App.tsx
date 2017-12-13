@@ -2,6 +2,7 @@ import * as React from "react";
 import { Col, Grid, Row } from "react-flexbox-grid";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Navigation from "./components/navigation/index";
+import Button from "./screens/Button";
 import Login from "./screens/Login";
 import "./styles/layout.css";
 
@@ -25,6 +26,7 @@ class App extends React.Component {
               <Route exact path="/" component={Login} />
               <Route path="/about" component={Login} />
               <Route path="/topics" component={Login} />
+              <Route path="/button" component={Button} />
             </Col>
           </Row>
         </Grid>
