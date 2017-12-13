@@ -32,11 +32,51 @@ main,
     background-color: red;
 }
 
-.navigation {
-    background-color: pink;
-    min-height: 100%;
-}
-
 .content {
     background-color: grey;
 }
+
+
+/* Side Navigation  */
+
+.navigation {
+    background-color: #384042;
+    min-height: 100%;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+}
+
+.Collapsible {
+    display: inline;
+}
+
+.Collapsible__trigger:after {
+    font-family: "FontAwesome";
+    content: "\F107";
+    color: #9faecb;
+    transition: transform 200ms;
+    float: right;
+    margin-right: 0.5em;
+    transform: rotate(90deg);
+}
+
+.is-open:after {
+    transform: rotateZ(0deg);
+}
+
+.Collapsible__trigger,
+.Collapsible a {
+    text-align: center;
+    line-height: 1.5em;
+}
+
+
+/* .Collapsible__contentInner li {
+    padding-left: 0.5em;
+} */
+
+
+/* End Side Navigation */
