@@ -16,6 +16,24 @@ class Button extends React.Component<Props, object> {
           icon="puzzle-piece"
           font={1.25}
         />
+        <StyledButton
+          title="test"
+          button="Secondary"
+          icon="puzzle-piece"
+          font={1.25}
+        />
+        <StyledButton
+          title="test"
+          button="Secondary"
+          icon="puzzle-piece"
+          font={1.25}
+        />
+        <StyledButton
+          title="test"
+          button="Secondary"
+          icon="puzzle-piece"
+          font={1.25}
+        />
       </div>
     );
   }
