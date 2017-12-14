@@ -10,7 +10,12 @@ class Button extends React.Component<Props, object> {
   public render() {
     return (
       <div>
-        <StyledButton title="test" icon={"puzzle-piece"} />
+        <StyledButton
+          title="test"
+          button="Secondary"
+          icon="puzzle-piece"
+          font={1.25}
+        />
       </div>
     );
   }
