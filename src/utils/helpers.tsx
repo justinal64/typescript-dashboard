@@ -10,7 +10,6 @@ const navColorScheme = {
 };
 
 export const getIcon = (name: string) => {
-  console.log(name);
   return <FontAwesome name={name} style={navColorScheme} />;
 };
 
