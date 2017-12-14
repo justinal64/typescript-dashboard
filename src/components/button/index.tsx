@@ -15,14 +15,14 @@ const Button = styled.button`
   margin: 0.15em;
   background-color: transparent;
   font-size: ${(props: any) => (props.font ? props.font : ".75")}rem;
-  display: ${(props: any) => (props.display ? displayBlock : "inline-block")};
+  ${(props: any) => (props.display ? displayBlock : "display: inline-block")};
   ${(props: any) => themePicker(props.inverted, props.button)};
   ${(props: any) => (props.disabled ? disabledButton : "")};
 `;
 
-export const displayBlock = `
-display: block;
-width: 100%;
+const displayBlock = `
+  display: block;
+  width: 100%;
 `;
 
 export const disabledButton = `
@@ -135,17 +135,7 @@ border-color: tomato;
 }
 `;
 
-export interface Props {
-  title: string;
-  icon?: string;
-  button?: string;
-  font?: number;
-  inverted?: boolean;
-  disabled?: boolean;
-  block?: boolean;
-}
-
-const themePicker = (inverted: any, button: any) => {
+const themePicker = (inverted: boolean, button: string) => {
   if (inverted) {
     return invertedButtonPicker(button);
   } else {
@@ -153,7 +143,7 @@ const themePicker = (inverted: any, button: any) => {
   }
 };
 
-const invertedButtonPicker = (button: any) => {
+const invertedButtonPicker = (button: string) => {
   if (button === "Primary") {
     return InvertedPrimaryButton;
   } else if (button === "Secondary") {
@@ -169,7 +159,7 @@ const invertedButtonPicker = (button: any) => {
   }
 };
 
-const buttonPicker = (button: any) => {
+const buttonPicker = (button: string) => {
   if (button === "Primary") {
     return PrimaryButton;
   } else if (button === "Secondary") {
@@ -185,9 +175,28 @@ const buttonPicker = (button: any) => {
   }
 };
 
+export interface Props {
+  title: string;
+  icon?: string;
+  button?: string;
+  font?: number;
+  inverted?: boolean;
+  disabled?: boolean;
+  display?: any;
+}
+
 class StyledButton extends React.Component<Props, object> {
   public render() {
-    const { title, icon, button, font, inverted, disabled, block } = this.props;
+    const {
+      title,
+      icon,
+      button,
+      font,
+      inverted,
+      disabled,
+      display
+    } = this.props;
+    console.log("block = " + display);
     const needIcon = icon ? getIcon(icon) : "";
     return (
       <Button
@@ -196,7 +205,7 @@ class StyledButton extends React.Component<Props, object> {
         font={font}
         inverted={inverted}
         disabled={disabled}
-        display={block}
+        // display={display}
       >
         {needIcon}
         {title}
@@ -204,23 +213,5 @@ class StyledButton extends React.Component<Props, object> {
     );
   }
 }
-
-// const StyledButton = (props: any) => {
-//   const { icon, title, font, inverted, disabled, block, button } = props;
-//   const needIcon = icon ? getIcon(icon) : "";
-//   return (
-//     <Button
-//       button={button}
-//       title={title}
-//       font={font}
-//       inverted={inverted}
-//       disabled={disabled}
-//       display={block}
-//     >
-//       {needIcon}
-//       {title}
-//     </Button>
-//   );
-// };
 
 export default StyledButton;
