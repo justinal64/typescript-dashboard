@@ -404,27 +404,27 @@ class Button extends React.Component<Props, object> {
                     <StyledButton
                       title="Block Level Button"
                       button="Primary"
-                      display
+                      block
                     />
                     <StyledButton
                       title="Block Level Button"
                       button="Secondary"
-                      // block
+                      block
                     />
                     <StyledButton
                       title="Block Level Button"
                       button="Success"
-                      // block
+                      block
                     />
                     <StyledButton
                       title="Block Level Button"
                       button="Warning"
-                      // block
+                      block
                     />
                     <StyledButton
                       title="Block Level Button"
                       button="Danger"
-                      // block
+                      block
                     />
                     {/* <StyledLink title="Link" block /> */}
                   </div>
@@ -439,7 +439,7 @@ class Button extends React.Component<Props, object> {
                     /> */}
                   </div>
                   <div className="card_body card_bg">
-                    {/* <StyledButton
+                    <StyledButton
                       title="Block Level Button"
                       button="Primary"
                       inverted
@@ -468,7 +468,7 @@ class Button extends React.Component<Props, object> {
                       button="Danger"
                       inverted
                       block
-                    /> */}
+                    />
                     {/* <StyledLink title="Link" block /> */}
                   </div>
                 </Col>

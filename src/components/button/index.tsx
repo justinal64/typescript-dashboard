@@ -30,11 +30,6 @@ opacity: .65;
 pointer-events: none;
 `;
 
-// const activeButton = `
-// opacity: 0;
-// pointer-events: auto;
-// `;
-
 const PrimaryButton = `
 color: #fff;
 background-color: #20a8d8;
@@ -182,22 +177,14 @@ export interface Props {
   font?: number;
   inverted?: boolean;
   disabled?: boolean;
-  display?: any;
+  block?: boolean;
 }
 
 class StyledButton extends React.Component<Props, object> {
   public render() {
-    const {
-      title,
-      icon,
-      button,
-      font,
-      inverted,
-      disabled,
-      display
-    } = this.props;
-    console.log("block = " + display);
+    const { title, icon, button, font, inverted, disabled, block } = this.props;
     const needIcon = icon ? getIcon(icon) : "";
+
     return (
       <Button
         button={button}
@@ -205,7 +192,7 @@ class StyledButton extends React.Component<Props, object> {
         font={font}
         inverted={inverted}
         disabled={disabled}
-        // display={display}
+        display={block ? 1 : 0} // better solution???
       >
         {needIcon}
         {title}
