@@ -25,6 +25,7 @@ const Li = styled.li`
   }
 `;
 
+// stateless functional component
 const Navigation = () => {
   return (
     <div>
