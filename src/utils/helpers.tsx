@@ -13,4 +13,10 @@ export const getIcon = (name: string) => {
   return <FontAwesome name={name} style={navColorScheme} />;
 };
 
-export default { getIcon };
+export const getFontSize = (props: any) =>
+  props.font ? `font-size: ${props.font}rem;` : "";
+
+export const getColor = (props: any) =>
+  props.color ? `color: ${props.color};` : "";
+
+export default { getIcon, getFontSize, getColor };
