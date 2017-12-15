@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Col, Grid, Row } from "react-flexbox-grid";
 import StyledButton from "../components/button/index";
+import Header from "../components/typography/header/index";
 
 export interface Props {
   name?: string;
@@ -23,7 +24,7 @@ class Button extends React.Component<Props, object> {
               <Row>
                 <Col xs={12} sm={6} md={6} lg={6}>
                   <div className="card_header card_bg">
-                    {/* <GraphHeader title="Options" font={1.25} /> */}
+                    <Header title="Options" font={1.25} />
                   </div>
                   <div className="card_body card_bg">
                     <StyledButton title="Primary" button="Primary" />
